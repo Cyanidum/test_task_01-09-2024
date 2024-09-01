@@ -1,0 +1,17 @@
+.banner{
+	width: 100%;
+	background-image: url(../../../public/img/Banner.png);
+	&__title{
+		font-family: 'SFBold';
+		font-size: em(50);
+		display: flex;
+		justify-content: center;
+		color: #ffffff;
+		padding-top: em(15);
+		padding-bottom: em(15);
+		span{
+			color: #6AD3FF;
+			border-bottom: em(1.5) solid #6AD3FF;
+		}
+	}
+}

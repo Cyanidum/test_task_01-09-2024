@@ -1,0 +1,47 @@
+.header{
+	background-color: #fff;
+	&__content{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo{
+		width: em(112);
+		img{
+			width: 100%;
+		}
+	}
+	&__navigation{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	&__menu{
+		display: flex;
+		flex-direction: row;
+		gap: em(80);
+		li{
+			text-transform: uppercase;
+			font-family: 'SFRegular';
+			transition: .2s ease-in-out;
+			&:hover{
+				color: #0297D4;
+			}
+		}
+	}
+	&__menu_btn{
+		margin-left: em(150);
+		text-transform: uppercase;
+		padding: em(15) em(30);
+		background-color: #0297D4;
+		color: #ffffff;
+		border-radius: em(30);
+		font-family: 'SFSemibold';
+		transition: .2s ease-in-out;
+		&:hover{
+			background-color: #077AA9;
+		}
+	}
+}

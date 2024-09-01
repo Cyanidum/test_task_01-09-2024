@@ -1,0 +1,36 @@
+.footer{
+	background-color: #586C75;
+	padding-top: em(30);
+	padding-bottom: em(30);
+	&__body{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: em(30);
+	}
+	&__logo{
+		width: em(113);
+		height: em(112);
+		img{
+			width: 100%;
+		}
+	}
+	&__navigation{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-size: em(16);
+		gap: em(30);
+		color: #ffffff;
+		text-transform: uppercase;
+		font-family: 'SFRegular';
+		li{
+			&:hover{
+				transition: .2s ease-in-out;
+				color: #0297D4;
+			}
+		}
+	}
+}

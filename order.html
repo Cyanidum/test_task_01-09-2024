@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=contain">
+    <title> </title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./public/css/style.min.css">
+  </head>
+  <body>
+    <div class="body-wrap">
+      <div class="header">
+        <div class="container">
+          <div class="header__content"> <a class="header__logo" href="/"> <img src="../../../public/img/Logo.png" alt=""></a>
+            <div class="header__navigation"> 
+              <ul class="header__menu">
+                <li> <a href="#">О проекте</a></li>
+                <li> <a href="/contacts.html">Контакты</a></li>
+              </ul><a class="header__menu_btn" href="/order.html">Добавить объявление</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="banner"> <span class="banner__title">Создание объявления</span></section>
+      <section class="form"> 
+        <div class="container"> 
+          <div class="form__body"> 
+            <div class="form__info"> 
+              <div class="form__icon"> <img src="../././../public/img/marketeq_money-alt-1.png" alt=""></div>
+              <div class="form__text"><span class="form__title text_common">Заполните все поля формы на размещение своего объявления на сайте. Размещение объявления платное. Стоимость за одно объявление составляет </span><span class="form__title_strong">990 руб. </span><span class="form__title text_common">Объявление будет опубликовано на сайте после оплаты и проверки модератором.</span></div>
+            </div>
+            <form class="form__form_container" id="formConctact">
+              <div class="form__control">
+                <label>Выберите город</label>
+                <select id="userCity" name="city">
+                  <option value="Москва">Москва </option>
+                  <option value="Санкт-Петербург">Санкт-Петербург</option>
+                  <option value="Новосибирск">Новосибирск</option>
+                  <option value="Екатеринбург">Екатеринбург</option>
+                  <option value="Казань">Казань</option>
+                </select>
+              </div>
+              <div class="form__control">
+                <label for="name">Имя:</label>
+                <input id="name" type="text" name="contactName" placeholder="Введите ваше имя">
+              </div>
+              <div class="form__control">
+                <label>Номер мобильного телефона</label>
+                <input id="userNumber" type="number" name="mobileNumber">
+              </div>
+              <div class="form__control">
+                <label>Номер домашнего телефона</label>
+                <input id="userHomeNumber" type="number" name="homeNumber"><span class="error-message"></span>
+              </div>
+              <div class="form__control">
+                <label>Ваш email</label>
+                <input id="email" type="email" name="contactEmail" placeholder="example@gmail.com"><span class="error-message"></span>
+              </div>
+              <div class="form__control">
+                <label>Адрес стоянки эвакуатора</label>
+                <input id="adress" type="text" name="parkingAddress"><span class="error-message"></span>
+              </div>
+              <div class="form__control form__second_control">
+                <label>Заголовок объявления</label>
+                <input id="title" type="text" name="notificationTitle" placeholder="Не более 50 символов"><span class="error-message"></span>
+              </div>
+              <div class="form__control">
+                <label>Описание объявления</label>
+                <textarea id="description" name="notificationDescription" placeholder="Не более 50 символов" maxlength="50"></textarea>
+              </div>
+              <div class="form__pricelist"> 
+                <div class="form__pricelist_paar"> 
+                  <div class="form__control form__price_input">
+                    <label>Легковые автомобили</label>
+                    <input id="auto" type="number" name="autoPrice"><span class="error-message"></span>
+                  </div>
+                  <div class="form__checkbox form__price_checkbox"> 
+                    <input class="form__checkbox_style" id="autoCheck" type="checkbox" name="autoCheck">
+                    <label for="autoCheck">Услугу не оказываю</label>
+                  </div>
+                </div>
+                <div class="form__pricelist_paar"> 
+                  <div class="form__control form__price_input">
+                    <label>Мототехника</label>
+                    <input id="moto" type="number" name="motoPrice"><span class="error-message"></span>
+                  </div>
+                  <div class="form__checkbox form__price_checkbox"> 
+                    <input class="form__checkbox_style" id="motoCheck" type="checkbox" name="motoCheck">
+                    <label for="motoCheck">Услугу не оказываю</label>
+                  </div>
+                </div>
+                <div class="form__pricelist_paar"> 
+                  <div class="form__control form__price_input">
+                    <label>Внедорожник</label>
+                    <input id="suv" type="number" name="suvPrice"><span class="error-message"></span>
+                  </div>
+                  <div class="form__checkbox form__price_checkbox"> 
+                    <input class="form__checkbox_style" id="suvCheck" type="checkbox" name="suvCheck">
+                    <label for="suvCheck">Услугу не оказываю</label>
+                  </div>
+                </div>
+                <div class="form__pricelist_paar"> 
+                  <div class="form__control form__price_input">
+                    <label>Микроавтобус</label>
+                    <input id="bus" type="number" name="busPrice"><span class="error-message"></span>
+                  </div>
+                  <div class="form__checkbox form__price_checkbox"> 
+                    <input class="form__checkbox_style" id="busCheck" type="checkbox" name="busCheck">
+                    <label for="busCheck">Услугу не оказываю</label>
+                  </div>
+                </div>
+                <div class="form__pricelist_paar"> 
+                  <div class="form__control form__price_last_input">
+                    <label>Загородный тариф</label>
+                    <input id="wasteland" type="number" name="wastelandPrice"><span class="error-message"></span>
+                  </div>
+                  <div class="form__checkbox form__price_checkbox"> 
+                    <input class="form__checkbox_style" id="wastelandCheck" type="checkbox" name="wastelandCheck">
+                    <label for="wastelandCheck">Услугу не оказываю</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__attach"> <span>Прикрепите фотографию к объявлению</span>
+                <label for="file-input">Загрузить</label>
+                <input id="file-input" type="file" name="file-input" accept="image/*">
+              </div>
+              <div class="form__rules_checkbox">
+                <input class="form__checkbox_style" id="rulesCheck" type="checkbox" name="rulesCheck">
+                <label for="rulesCheck">Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в evarus.ru. Я подтверждаю своё совершеннолетие и ответственность за размещение.</label><span class="error-message"></span>
+              </div>
+              <button class="form-conctact__btn" type="submit">Продолжить</button>
+              <div class="form__first_breakpoint"> 
+                <div class="form__line"> </div><span>Информация</span>
+                <div class="form__line"></div>
+              </div>
+              <div class="form__second_breakpoint"> 
+                <div class="form__line"> </div><span>Цены</span>
+                <div class="form__line"></div>
+              </div>
+              <div class="form__third_breakpoint"> 
+                <div class="form__line"> </div><span>Фото</span>
+                <div class="form__line"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="popup-overlay" id="popup-overlay"></div>
+        <div class="popup" id="popup"><span class="popup-close" id="popup-close">&times;</span>
+          <p>Ваш запрос принят!</p>
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+      <div class="container"> 
+        <div class="footer__body"> <a class="footer__logo" href="/"> <img src="../../../public/img/footer_logo.png" alt=""></a>
+          <ul class="footer__navigation">
+            <li><a href="#">Вызвать эвакуатор</a></li>
+            <li><a href="#">Добавить эвакуатор на сайт</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Правила оплаты</a></li>
+            <li><a href="#">Защита персональных данных</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./public/js/main.min.js"></script>
+</html>

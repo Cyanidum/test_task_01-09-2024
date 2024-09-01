@@ -1,0 +1,76 @@
+.pros{
+	padding-top: em(90);
+	background-color: #ffffff;
+	padding-bottom: em(90);
+	&__body{
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+	}
+	&__subtitle{
+		margin-top: em(30);
+		line-height: 1.2;
+		width: em(480);
+	}
+	&__subtitle-2{
+		margin-top: em(20);
+	}
+	&__info{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: em(40);
+	}
+	&__list{
+		display: flex;
+		flex-direction: column;
+		gap: em(30);
+		margin-top: em(30);
+		width: em(733);
+	}
+	&__item{
+		position: relative;
+		margin-left: em(32);
+	}
+	&__item:before{
+		position: absolute;
+		left: em(-32);
+		content: '';
+		background: url(../../../public/img/white-check.svg);
+		background-size: em(20) em(20);
+		width: em(20);
+		height: em(20);
+	}
+	&__avatar{
+		position: relative;
+		top: em(-60);
+		width: em(630);
+		height: em(645);
+		img{
+			width: 100%;
+		}
+	}
+	&__cards{
+		margin-top: em(40);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: em(30);
+	}
+	&__card{
+		display: flex;
+		flex-direction: column;
+		width: em(684);
+		height: em(593);
+		background-color: #FFF5CC;
+		padding: em(50);
+		border-radius: em(20);
+		z-index: 10;
+	}
+	&__card_subtitle{
+		margin-top: em(22);
+		line-height: 1.2;
+	}
+}

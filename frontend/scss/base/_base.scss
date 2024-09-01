@@ -1,0 +1,55 @@
+html{
+	height: 100%;
+	font-size: 1rem;
+	font-weight: normal;
+}
+body{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+.container{
+	position: relative;
+	width: em(1300);
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.text_title{
+	font-family: 'SFBold';
+	font-size: em(40);
+	color: #131515;
+}
+.text_subtitle{
+	font-family: 'SFBold';
+	font-size: em(26);
+	color: #131515;
+}
+.text_common{
+	font-family: 'SFRegular';
+	font-size: em(26);
+	color: #131515;
+	line-height: 1.2;
+}
+@media(max-width:1500px){
+	html{
+		font-size: 0.8rem;
+	}
+}
+@media(max-width:1200px){
+	html{
+		font-size: 0.7rem;
+	}
+}
+@media(max-width:1024px){
+	html{
+		font-size: 1vw;
+	}
+	.container{
+		width: 90%;
+	}
+}

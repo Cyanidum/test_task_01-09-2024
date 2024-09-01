@@ -1,0 +1,90 @@
+
+.tabs {
+	padding-top: em(90);
+	padding-bottom: em(90);
+	background-color: #F5F5F5;
+	&__body{
+		background-color: #ffffff;
+		padding: em(20);
+		display: flex;
+		flex-direction: column;
+		border-radius: em(15);
+	}
+	&__tab-header {
+		display: flex;
+		flex-direction: row;
+		width: em(700);
+	}
+	&__tab-link {
+		background-color: #F5F5F5;
+		padding: em(10) em(25);
+		border: none;
+		cursor: pointer;
+		outline: none;
+		font-size: em(36);
+		font-family: 'SFRegular';
+		color: #131515;
+		text-align: center;
+		transition: background-color 0.3s ease;
+	}
+	&__tab-link.active {
+		background-color: #ffffff; /* Изменение фона для активной вкладки */
+		border-radius: em(10) em(10) 0 0;
+		box-shadow: #131515;
+	}
+	&__tab-content {
+		display: none;
+		padding: 20px;
+	}
+	&__tab-content.active {
+		display: block;
+	}
+	&__subtitle{
+		margin-top: em(20);
+	}
+	&__subtitle-2{
+		margin-top: em(20);
+	}
+	&__list{
+		margin-top: em(36);
+		display: flex;
+		flex-direction: column;
+		gap: em(20);
+	}
+	&__item{
+		position: relative;
+		margin-left: em(32);
+	}
+	&__item:before{
+		position: absolute;
+		left: em(-32);
+		content: '';
+		background: url(../../../public/img/white-check.svg);
+		background-size: em(20) em(20);
+		width: em(20);
+		height: em(20);
+	}
+	&__number_list{
+		margin-top: em(20);
+		li{
+			margin-top: em(5);
+			display: flex; 
+			align-items: start; 
+		}
+		span{
+			display: flex; 
+			align-items: center; 
+			justify-content: center; 
+			width: em(25); 
+			height: em(25); 
+			font-size: em(14);
+			color: #0297D4;
+			font-family: 'SFBold';
+			border: em(2.5) solid #0297D4;
+			border-radius: 50%; 
+			margin-right: em(10); 
+			box-sizing: border-box; 
+			flex-shrink: 0;  
+		}
+	}
+}

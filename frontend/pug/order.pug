@@ -1,0 +1,123 @@
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			include includes/header
+			section.banner 
+				span.banner__title Создание объявления
+			section.form 
+				.container 
+					.form__body 
+						.form__info 
+							.form__icon 
+								img(src="../././../public/img/marketeq_money-alt-1.png", alt="")
+							.form__text
+								span.form__title.text_common Заполните все поля формы на размещение своего объявления на сайте. Размещение объявления платное. Стоимость за одно объявление составляет 
+								span.form__title_strong 990 руб. 
+								span.form__title.text_common Объявление будет опубликовано на сайте после оплаты и проверки модератором.
+						form#formConctact.form__form_container
+							.form__control
+								label Выберите город
+								select#userCity(name='city')
+									option(value="Москва") Москва 
+									option(value="Санкт-Петербург") Санкт-Петербург
+									option(value="Новосибирск") Новосибирск
+									option(value="Екатеринбург") Екатеринбург
+									option(value="Казань") Казань
+							.form__control
+								label(for="name") Имя:
+								input#name(type="text" name="contactName" placeholder="Введите ваше имя")
+							.form__control
+								label Номер мобильного телефона
+								input#userNumber(type='number' name='mobileNumber')
+							.form__control
+								label Номер домашнего телефона
+								input#userHomeNumber(type='number' name='homeNumber')
+								span.error-message
+							.form__control
+								label Ваш email
+								input#email(type='email' name='contactEmail' placeholder='example@gmail.com')
+								span.error-message
+							.form__control
+								label Адрес стоянки эвакуатора
+								input#adress(type='text' name='parkingAddress')
+								span.error-message
+							.form__control.form__second_control
+								label Заголовок объявления
+								input#title(type='text' name='notificationTitle' placeholder='Не более 50 символов')
+								span.error-message
+							.form__control
+								label Описание объявления
+								textarea#description(name="notificationDescription" placeholder='Не более 50 символов' maxlength="50")
+							.form__pricelist 
+								.form__pricelist_paar 
+									.form__control.form__price_input
+										label Легковые автомобили
+										input#auto(type='number' name='autoPrice')
+										span.error-message
+									.form__checkbox.form__price_checkbox 
+										input#autoCheck.form__checkbox_style(type="checkbox" name="autoCheck")
+										label(for="autoCheck") Услугу не оказываю
+								.form__pricelist_paar 
+									.form__control.form__price_input
+										label Мототехника
+										input#moto(type='number' name='motoPrice')
+										span.error-message
+									.form__checkbox.form__price_checkbox 
+										input#motoCheck.form__checkbox_style(type="checkbox" name="motoCheck")
+										label(for="motoCheck") Услугу не оказываю
+								.form__pricelist_paar 
+									.form__control.form__price_input
+										label Внедорожник
+										input#suv(type='number' name='suvPrice')
+										span.error-message
+									.form__checkbox.form__price_checkbox 
+										input#suvCheck.form__checkbox_style(type="checkbox" name="suvCheck")
+										label(for="suvCheck") Услугу не оказываю
+								.form__pricelist_paar 
+									.form__control.form__price_input
+										label Микроавтобус
+										input#bus(type='number' name='busPrice')
+										span.error-message
+									.form__checkbox.form__price_checkbox 
+										input#busCheck.form__checkbox_style(type="checkbox" name="busCheck")
+										label(for="busCheck") Услугу не оказываю
+								.form__pricelist_paar 
+									.form__control.form__price_last_input
+										label Загородный тариф
+										input#wasteland(type='number' name='wastelandPrice')
+										span.error-message
+									.form__checkbox.form__price_checkbox 
+										input#wastelandCheck.form__checkbox_style(type="checkbox" name="wastelandCheck")
+										label(for="wastelandCheck") Услугу не оказываю
+							.form__attach 
+								span Прикрепите фотографию к объявлению
+								label(for="file-input") Загрузить
+								input#file-input(type="file", name="file-input" accept="image/*") 
+							.form__rules_checkbox
+								input#rulesCheck.form__checkbox_style(type="checkbox" name="rulesCheck")
+								label(for="rulesCheck") Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в evarus.ru. Я подтверждаю своё совершеннолетие и ответственность за размещение.
+								span.error-message
+							button.form-conctact__btn(type='submit') Продолжить
+							.form__first_breakpoint 
+								.form__line 
+								span Информация
+								.form__line
+							.form__second_breakpoint 
+								.form__line 
+								span Цены
+								.form__line
+							.form__third_breakpoint 
+								.form__line 
+								span Фото
+								.form__line
+				#popup-overlay.popup-overlay
+				#popup.popup
+					span#popup-close.popup-close &times;
+					p Ваш запрос принят!
+
+		include includes/footer
+	include includes/foot
+
+

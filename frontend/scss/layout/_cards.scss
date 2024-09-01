@@ -1,0 +1,264 @@
+.body-wrap{
+	background-color: #F5F5F5;
+}
+.contact_cards{
+	margin-top: em(60);
+	width: em(1350);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: em(100);
+	&__body{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: em(50);
+	}
+	&__card{
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		padding: em(25);
+		background-color: #ffffff;
+		border-radius: em(20);
+		box-shadow: em(1) em(1) em(2) em(2) rgb(219, 219, 219);
+	}
+	&__card_title{
+		font-family: 'SFBold';
+		font-size: em(32);
+		color: #131515;
+	}
+	&__card_content{
+		margin-top: em(20);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: em(30);
+		justify-content: space-between;
+		margin-bottom: em(20);
+	}
+	&__card_img{
+		width: em(414);
+		height: em(328);
+		img{
+			width: 100%;
+		}
+	}
+	&__card_characteristics{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: em(10);
+	}
+	&__characteristics_field{
+		background-color: #F2F4F8;
+		border-radius: em(10);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: em(19);
+		gap: em(120);
+	}
+	&__type{
+		font-family: 'SFRegular';
+		font-size: em(20);
+		color: #777777;
+	}
+	&__price{
+		font-family: 'SFBold';
+		font-size: em(20);
+		color: #777777;
+	}
+	&__card_contacts{
+		display: flex;
+		flex-direction: column;
+		gap: em(26);
+	}
+	&__phone_number{
+		position: relative;
+		padding: em(15) em(40);
+		background-color: #0297D4;
+		color: #ffffff;
+		font-family: 'SFSemibold';
+		font-size: em(20);
+		border-radius: em(30);
+		text-align: center;
+		&:before{
+			position: absolute;
+			left: em(18);
+			top: em(14);
+			content: '';
+			background: url(../../../public/img/fluent_call-24-filled.png);
+			background-size: em(20) em(20);
+			width: em(20);
+			height: em(20);
+		}
+	}
+	&__home_number{
+		position: relative;
+		text-align: center;
+		padding: em(15) em(40);
+		background-color: #0297D4;
+		color: #ffffff;
+		font-family: 'SFSemibold';
+		font-size: em(20);
+		border-radius: em(30);
+		&:before{
+			position: absolute;
+			left: em(20);
+			top: em(13);
+			content: '';
+			background: url(../../../public/img/entypo_old-phone.png);
+			background-size: em(20) em(20);
+			width: em(20);
+			height: em(20);
+		}
+	}
+	&__adress{
+		background-color: #FFF5CC;
+		border-radius: em(10);
+		padding: em(15) em(20);
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		gap: em(15);
+	}
+	&__adress_location{
+		position: relative;
+		margin-left: em(18);
+		font-family: 'SFRegular';
+		font-size: em(20);
+		color: #777777;
+		&:before{
+			position: absolute;
+			left: em(-20);
+			top: em(-2);
+			content: '';
+			background: url(../../../public/img/weui_location-filled.png);
+			background-size: em(20) em(20);
+			width: em(20);
+			height: em(20);
+		}
+	}
+	&__adress_place{
+		font-family: 'SFRegular';
+		font-size: em(20);
+		color: #1B1E1F;
+	}
+	&__ads{
+		background-color: transparent;
+		border: em(1) solid #0297D4;
+		border-radius: em(30);
+		padding: em(10) em(25);
+		display: flex;
+		flex-direction: column;
+		transition: .2s ease-in-out;
+		&:hover{
+			background-color: #0297D4;
+			span{
+				color: #F2F4F8;
+			}
+		}
+	}
+	&__id{
+		font-family: 'SFRegular';
+		text-align: center;
+		font-size: em(12);
+		color: #0297D4;
+		span{
+			font-family: 'SFBold';
+			color: #0297D4;
+			transition: .2s ease-in-out;
+		}
+		transition: .2s ease-in-out;
+	}
+	&__buy{
+		margin-top: em(5);
+		text-align: center;
+		font-family: 'SFBold';
+		font-size: em(14);
+		color: #0297D4;
+		text-decoration: underline;
+		transition: .2s ease-in-out;
+	}
+	&__card_footer{
+		font-family: 'SFRegular';
+		font-size: em(20);
+		color: #131515;
+		margin-top: em(25);
+		margin-bottom: em(15);
+	}
+	.contact_cards__card {
+		display: none; 
+	}
+
+	.contact_cards__card.visible {
+		display: block; 
+	}
+
+	.pagination {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: em(20);
+		gap: em(10);
+	}
+
+	.pagination__prev, .pagination__next {
+		margin: 0 em(10);
+		cursor: pointer;
+		background-color: transparent;
+		border: em(1) solid #007bff;
+		width: em(40);
+		height: em(40);
+		border-radius: em(10);
+		transition: .2s ease-in-out;
+		&:hover{
+			background-color: #e1f0ff;
+		}
+	}
+	.pagination__prev{
+		position: relative;
+		background: url(../../../public/img/arr-left.png);
+		background-repeat: no-repeat;
+		background-size: em(22) em(22);
+		background-position: 50% 50%;
+	}
+	.pagination__next{
+		position: relative;
+		background: url(../../../public/img/arr-right.png);
+		background-repeat: no-repeat;
+		background-size: em(22) em(22);
+		background-position: 50% 50%;
+	}
+	.pagination__pages {
+		display: flex;
+		gap: em(10);
+	}
+
+	.pagination__page {
+		width: em(40);
+		height: em(40);
+		display: flex;
+		justify-content: center;
+		font-family: 'SFRegular';
+		align-items: center;
+		border: em(1) solid #007bff;
+		border-radius: em(10);
+		color: #007bff;
+		cursor: pointer;
+		user-select: none;
+		transition: .2s ease-in-out;
+		&:hover{
+			background-color: #e1f0ff;
+		}
+	}
+
+	.pagination__page.active {
+		background-color: #007bff;
+		font-family: 'SFBold';
+		color: #fff;
+		border-color: #007bff;
+	}
+}
